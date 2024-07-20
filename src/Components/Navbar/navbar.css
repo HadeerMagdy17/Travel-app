@@ -1,1 +1,136 @@
-/*# sourceMappingURL=navbar.css.map */
+:root {
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsl(187, 85%, 43%);
+  --gradient-color: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: rgb(240, 240, 246);
+  --cardBg: rgb(225, 225, 235);
+}
+
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--whiteColorDeam);
+  width: 100%;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.logo {
+  color: var(--black-color);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo .icon {
+  font-size: 25px;
+  transform: translateY(5px);
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+}
+
+.navItem {
+  margin-left: 1rem;
+}
+
+.navLink {
+  color: var(--textColor);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navLink:hover {
+  color: var(--PrimaryColor);
+}
+
+.btn {
+  margin-left: 1rem;
+}
+
+.btn a {
+  font-weight: 600;
+  color: var(--white-color);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn a:hover {
+  background-color: var(--SecondaryColor);
+}
+
+.toggleNavbar .icon {
+  font-size: 25px;
+  color: var(--PrimaryColor);
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navBar {
+    display: none;
+  }
+  .toggleNavbar .icon {
+    display: block;
+  }
+  .navBar.activeNavbar {
+    display: flex;
+    position: absolute;
+    background: var(--whiteColorDeam);
+    height: -moz-max-content;
+    height: max-content;
+    width: 80%;
+    border-radius: 1rem;
+    top: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2000;
+    box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
+    transition: 0.6s ease-in-out;
+  }
+  .navList {
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    padding: 0.5rem 0;
+  }
+  .navItem {
+    padding: 0.5rem 0;
+  }
+  .closeNavbar {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    color: var(--PrimaryColor);
+    cursor: pointer;
+  }
+  .closeNavbar:hover {
+    color: var(--SecondaryColor);
+  }
+}
+@media screen and (min-width: 769px) {
+  .closeNavbar {
+    display: none;
+  }
+}/*# sourceMappingURL=navbar.css.map */
