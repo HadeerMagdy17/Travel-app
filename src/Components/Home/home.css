@@ -1,1 +1,153 @@
-/*# sourceMappingURL=home.css.map */
+:root {
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsl(187, 85%, 43%);
+  --gradient-color: linear-gradient(
+    to right,
+    hsl(187, 85%, 43%),
+    hsl(199, 100%, 33%)
+  );
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: rgb(240, 240, 246);
+  --cardBg: rgb(225, 225, 235);
+}
+
+.home {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  width: 100%;
+  height: 100vh; /* Ensures the home section takes full viewport height */
+}
+.home .overlay {
+  position: absolute;
+  height: 100vh !important;
+  width: 100%;
+  background: rgb(47, 106, 127);
+  opacity: 0.5;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.home video {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+}
+.home .homeContent {
+  height: -moz-max-content;
+  height: max-content;
+  width: 100%;
+  padding: 8rem 1.5rem 3rem;
+  display: flex;
+  row-gap: 3rem;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  margin: auto;
+  color: var(--white-color);
+  z-index: 2;
+}
+.home .homeContent .textDiv {
+  padding: 4rem 0;
+  margin: auto;
+  text-align: center;
+}
+.home .homeContent .textDiv .smallText {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.home .homeContent .textDiv .homeTitle {
+  font-size: 1.8rem;
+}
+.home .homeContent .cardDiv {
+  position: relative;
+  padding: 2rem 1rem;
+  background-color: var(--white-color);
+  border-radius: 10px;
+  gap: 1rem;
+}
+.home .homeContent .cardDiv label {
+  display: block;
+  color: var(--textColor);
+  padding-bottom: 5px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.home .homeContent .cardDiv .label_total {
+  align-items: center;
+}
+.home .homeContent .cardDiv .label_total .total {
+  color: var(--textColor);
+  padding-bottom: 10px;
+  font-size: 18px;
+}
+.home .homeContent .cardDiv .input {
+  height: 40px;
+  padding: 0rem 1rem;
+  background: var(--inputColor);
+  border-radius: 3rem;
+}
+.home .homeContent .cardDiv .input input {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 13px;
+  font-weight: 500;
+}
+.home .homeContent .cardDiv .input input::-moz-placeholder {
+  font-size: 13px;
+}
+.home .homeContent .cardDiv .input input::placeholder {
+  font-size: 13px;
+}
+.home .homeContent .cardDiv .input .icon {
+  color: var(--textColor);
+  font-size: 18px;
+}
+.home .homeContent .cardDiv .searchoption {
+  position: absolute;
+  background: var(--gradient-color);
+  width: -moz-max-content;
+  width: max-content;
+  bottom: -0.9rem;
+  -moz-column-gap: 0.8rem;
+       column-gap: 0.8rem;
+  padding: 5px 1rem;
+  border-radius: 3rem;
+  left: 50%;
+  transform: translate(-50%);
+  justify-content: center;
+  cursor: pointer;
+}
+.home .homeContent .cardDiv .searchoption:hover {
+  color: var(--PrimaryColor);
+}
+.home .homeContent .cardDiv .searchoption .icon {
+  font-size: 18px;
+}
+.home .homeContent .cardDiv .searchoption span {
+  font-size: 13px;
+}
+@media (min-width: 992px) {
+  .home .homeContent { /* Large screen size: 992px and above */ }
+  .home .homeContent .cardDiv {
+    width: 60%; /* Set width to 80% */
+    margin: auto; /* Center horizontally */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+  }
+}/*# sourceMappingURL=home.css.map */
