@@ -1,8 +1,9 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react';
 import { MdOutlineTravelExplore } from 'react-icons/md';
 import { TbGridDots } from 'react-icons/tb';
 import { IoIosCloseCircle } from 'react-icons/io';
 import './navbar.css';
+import { Link } from 'react-router-dom'; // If using React Router
 
 export default function Navbar() {
   const [active, setActive] = useState('navBar');
@@ -21,35 +22,35 @@ export default function Navbar() {
     <section className='navBarSection'>
       <header className='header flex'>
         <div className='logoDiv'>
-          <a href="#" className='logo flex'>
+          <Link to="/" className='logo flex'>
             <h1>
               <MdOutlineTravelExplore className="icon" />
               Travel.
             </h1>
-          </a>
+          </Link>
         </div>
         <nav className={active}>
           <ul className='navList flex'>
             <li className='navItem'>
-              <a href="#" className='navLink'>Home</a>
+              <Link to="/" className='navLink'>Home</Link>
             </li>
             <li className='navItem'>
-              <a href="#" className='navLink'>Packages</a>
+              <Link to="/packages" className='navLink'>Packages</Link>
             </li>
             <li className='navItem'>
-              <a href="#" className='navLink'>Shop</a>
+              <Link to="/shop" className='navLink'>Shop</Link>
             </li>
             <li className='navItem'>
-              <a href="#" className='navLink'>About</a>
+              <Link to="/about" className='navLink'>About</Link>
             </li>
             <li className='navItem'>
-              <a href="#" className='navLink'>News</a>
+              <Link to="/news" className='navLink'>News</Link>
             </li>
             <li className='navItem'>
-              <a href="#" className='navLink'>Contact</a>
+              <Link to="/contact" className='navLink'>Contact</Link>
             </li>
             <button className='btn'>
-              <a href="#">BOOK NOW</a>
+              <Link to="/book">BOOK NOW</Link>
             </button>
           </ul>
           <div onClick={removeNav} className='closeNavbar'>
@@ -63,4 +64,3 @@ export default function Navbar() {
     </section>
   );
 }
-
