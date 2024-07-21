@@ -1,21 +1,31 @@
-import React from "react";
+import React,{useEffect} from "react";
 import "./home.css";
 import video from "../../assets/images/header.mp4";
 import { GrLocation } from "react-icons/gr";
 import { HiFilter } from "react-icons/hi";
+import Aos from "aos";
+import 'aos/dist/aos.css'
 
 export default function Home() {
+//add scroll animation
+useEffect(() => {
+
+Aos.init({duration:2000})
+
+}, [])
+
+
   return (
     <section className="home">
       <video src={video} muted autoPlay loop playsInline type="video/mp4"></video>
       <div className="overlay"></div>
       <div className="homeContent container">
         <div className="textDiv">
-          <span className="smallText">Our Packages</span>
-          <h2 className="homeTitle">Search your holiday</h2>
+          <span data-aos="fade-up" className="smallText">Our Packages</span>
+          <h2 data-aos="fade-up" className="homeTitle">Search your holiday</h2>
         </div>
 
-        <div className="cardDiv grid">
+        <div data-aos="fade-up" className="cardDiv grid">
           <div className="destinationInput">
             <label htmlFor="city">Search your Destination:</label>
           <div className="input flex">

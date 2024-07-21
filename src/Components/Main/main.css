@@ -1,1 +1,74 @@
-/*# sourceMappingURL=main.css.map */
+:root {
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsl(187, 85%, 43%);
+  --gradient-color: linear-gradient(
+    to right,
+    hsl(187, 85%, 43%),
+    hsl(199, 100%, 33%)
+  );
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: rgb(240, 240, 246);
+  --cardBg: rgb(225, 225, 235);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section {
+  padding: 2rem 0;
+}
+
+.secTitle {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.secTitle .title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--textColor);
+}
+
+.secContent {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .secContent {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 992px) {
+  .secContent {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.secContent .singleDestination {
+  background-color: var(--white-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0.3rem;
+  transition: transform 0.3s;
+  text-align: center;
+}
+.secContent .singleDestination:hover {
+  transform: translateY(-5px);
+}
+.secContent .singleDestination img {
+  width: 100%;
+  border-radius: 10px;
+}
+.secContent .singleDestination h4 {
+  margin: 1rem 0 0.5rem;
+}
+.secContent .singleDestination p {
+  margin: 0.5rem 0;
+}/*# sourceMappingURL=main.css.map */
